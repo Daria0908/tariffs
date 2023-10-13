@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import data from "./data";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="cards">
+        {data.map((card) => (
+          <div className={"card " + `${card.color} ` + (card.isSelected ? "selected" : "")}>
+            <h2 className="cardHeader">{card.name}</h2>
+            <p className="price">
+              <div>руб</div>
+              <div className="currentPrices">{card.price}/мес</div>
+            </p>
+            <p className="speed">До {card.speed} Мбит/сек</p>
+            <p className="text">Объем включенного трафика не ограничен</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

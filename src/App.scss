@@ -1,0 +1,86 @@
+.cards {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+
+  .card {
+    max-width: 20%;
+    margin: 0;
+
+    .cardHeader {
+      color: rgb(226, 226, 226);
+      margin: 0;
+    }
+
+    .price {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: white;
+      margin: 0;
+
+      .currentPrices{
+        font-size: 24px;
+        margin-left: 40%;
+      }
+    }
+
+    .speed {
+      background-color: rgb(181, 181, 181);
+      margin: 0;
+    }
+    
+    .text {
+      margin: 0;
+      background-color: gray;
+    }
+  }
+
+  .blue {
+    .cardHeader {
+      background-color: rgb(47, 97, 120);
+    }
+    .price {
+      background-color: rgb(68, 148, 186);
+    }
+  }
+
+  .green {
+    .cardHeader {
+      background-color: rgb(40, 105, 83);
+    }
+    .price {
+      background-color: rgb(17, 136, 97);
+    }
+  }
+
+  .red {
+    .cardHeader {
+      background-color: rgb(137, 1, 1);
+    }
+    .price {
+      background-color: rgb(169, 23, 23);
+    }
+
+  }
+
+  .black {
+    .cardHeader {
+      background-color: black
+    }
+    .price {
+      background-color: rgb(42, 42, 42)
+    }
+  }
+
+  .selected {
+    .cardHeader {
+      height: 80px;
+    }
+    .price {
+      height: 80px;
+    }
+  }
+}
